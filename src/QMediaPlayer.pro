@@ -11,10 +11,20 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = QMediaPlayer
 TEMPLATE = app
 
+DEFINES += _ARCH_ARM
+DEFINES += _ARCH_x86
+
+DEFINES += _SYS_LINUX
+DEFINES += _SYS_WIN
+
+DEFINES += _UI_WIDGET
+DEFINES += _UI_QML
+
+
 
 SOURCES += main.cpp\
-        MainWindow.cpp
+        ui/QWidget/MainWindow.cpp
 
-HEADERS  += MainWindow.h
+HEADERS  += ui/QWidget/MainWindow.h
 
-FORMS    += MainWindow.ui
+FORMS    += ui/QWidget/MainWindow.ui
